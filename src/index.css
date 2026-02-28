@@ -7,11 +7,11 @@
 }
 
 @theme {
-  --color-primary: hsl(184, 100%, 42%);
-  --color-secondary: hsl(266, 100%, 24%);
-  --color-accent: hsl(324, 100%, 18%);
+  --color-primary: hsl(184, 100%, 50%);
+  --color-secondary: hsl(266, 100%, 50%);
+  --color-accent: hsl(324, 100%, 50%);
   --color-background-dark: hsl(240, 47%, 12%);
-  --color-glass-border: rgba(255, 255, 255, 0.15);
+  --color-glass-border: hsla(0, 0%, 100%, 0.15);
 
   --font-display: var(--font-space-grotesk);
   --font-body: var(--font-inter);
@@ -61,8 +61,8 @@
 /* Custom Utilities */
 .glass-panel {
   background: rgba(20, 20, 35, 0.3);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }

@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
         <>
             <div className="fixed top-8 left-8 z-50">
                 <a href="#hero" className="text-3xl font-display font-bold tracking-tighter hover:text-primary transition-colors duration-300 drop-shadow-[0_0_10px_rgba(0,240,255,0.5)]">
-                    UX<span className="text-accent">.</span>DEV
+                    R<span className="text-accent">`</span>s
                 </a>
             </div>
 

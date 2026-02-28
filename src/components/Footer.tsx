@@ -11,19 +11,19 @@ const Footer: React.FC = () => {
                 </h3>
 
                 <div className="flex justify-center gap-8 mb-12">
-                    <a href="#" className="w-16 h-16 rounded-full glass-panel flex items-center justify-center hover:bg-white hover:text-black hover:border-white hover:scale-110 transition-all duration-300 group shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.8)]" aria-label="Email">
+                    <a href="mailto:rishusoni6393@gmail.com" target='blank' className="w-16 h-16 rounded-full glass-panel flex items-center justify-center hover:bg-white text-gray-500 hover:text-white hover:border-white hover:scale-110 transition-all duration-300 group shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.8)]" aria-label="Email">
                         <Mail className="w-8 h-8" />
                     </a>
-                    <a href="#" className="w-16 h-16 rounded-full glass-panel flex items-center justify-center hover:bg-[#0077b5] hover:text-white hover:border-[#0077b5] hover:scale-110 transition-all duration-300 group shadow-[0_0_20px_rgba(0,119,181,0.2)] hover:shadow-[0_0_30px_rgba(0,119,181,0.8)]" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/rishu-soni-207694325/" target='blank' className="w-16 h-16 rounded-full glass-panel flex items-center justify-center hover:bg-[#0077b5] text-gray-500 hover:text-white hover:border-[#0077b5] hover:scale-110 transition-all duration-300 group shadow-[0_0_20px_rgba(0,119,181,0.2)] hover:shadow-[0_0_30px_rgba(0,119,181,0.8)]" aria-label="LinkedIn">
                         <Linkedin className="w-8 h-8 fill-current" />
                     </a>
-                    <a href="#" className="w-16 h-16 rounded-full glass-panel flex items-center justify-center hover:bg-white hover:text-black hover:border-white hover:scale-110 transition-all duration-300 group shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.8)]" aria-label="GitHub">
+                    <a href="https://github.com/Rishu-Soni" target='blank' className="w-16 h-16 rounded-full glass-panel flex items-center justify-center hover:bg-white text-gray-500 hover:text-white hover:border-white hover:scale-110 transition-all duration-300 group shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.8)]" aria-label="GitHub">
                         <Github className="w-8 h-8 fill-current" />
                     </a>
                 </div>
 
                 <p className="text-gray-500 text-sm font-medium">
-                    © 2024 UX.Dev Portfolio. Crafted with <span className="text-accent">♥</span> in the Metaverse.
+                    © 2024 R`s Portfolio. Crafted with <span className="text-accent">♥</span> in the Metaverse.
                 </p>
             </div>
         </footer>

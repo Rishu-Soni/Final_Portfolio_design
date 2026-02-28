@@ -26,10 +26,10 @@ const Projects: React.FC = () => {
                                 <img
                                     src={project.image}
                                     alt={project.title}
-                                    className="w-full h-auto filter blur-[2px] brightness-8 group-hover:brightness-75 transition-all duration-500 block"
+                                    className="w-full h-auto filter blur-[1px] brightness-8 group-hover:brightness-75 transition-all duration-500 block"
                                 />
 
-                                <div className="absolute inset-0 z-10 flex flex-col p-6">
+                                <div className="absolute inset-0 z-10 flex flex-col p-6 items-center justify-center">
                                     <div className="absolute top-0 right-0 p-4 z-20">
                                         <ArrowUpRight className="text-gray-500 group-hover:text-white transition-colors" />
                                     </div>

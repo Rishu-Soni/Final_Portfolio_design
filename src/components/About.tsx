@@ -6,8 +6,13 @@ import { STATS } from '@/constants';
 const About: React.FC = () => {
     return (
         <section id="about" className="py-32 relative">
-            <div className="container mx-auto px-6 max-w-6xl">
-                <div className="glass-panel rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden">
+            <div className="container mx-auto px-6 max-w-6xl ">
+                <div
+                    className="glass-panel rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden"
+                    style={{
+                        boxShadow: '0 10px 40px rgba(0, 0, 0, 0.2), inset 2px 2px 6px rgba(255, 255, 255, 0.2), inset -2px -2px 6px rgba(0, 0, 0, 0.5)'
+                    }}
+                >
                     {/* Decorative gradients inside card */}
                     <div className="absolute -top-24 -right-24 w-64 h-64 bg-accent/20 rounded-full blur-[80px]" />
                     <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/20 rounded-full blur-[80px]" />
