@@ -5,19 +5,19 @@ const Hero: React.FC = () => {
     return (
         <section id="hero" className="min-h-screen flex items-center justify-center relative">
             <div className="container mx-auto px-6 text-center z-10 relative">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full blur-[80px] -z-10 animate-pulse" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 md:w-[600px] md:h-[600px] bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full blur-[60px] md:blur-[80px] -z-10 animate-pulse" />
 
                 <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-white/5 border border-white/10 text-xs font-bold tracking-widest text-primary mb-8 backdrop-blur-md hover:bg-white/10 transition-colors cursor-default shadow-[0_0_20px_rgba(0,240,255,0.15)]">
                     <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                     Frontend Developer
                 </div>
 
-                <h1 className="text-6xl text-gray-300 md:text-8xl lg:text-9xl font-display font-bold tracking-tight mb-8 leading-tight">
+                <h1 className="text-5xl sm:text-6xl text-gray-300 md:text-8xl lg:text-9xl font-display font-bold tracking-tight mb-6 md:mb-8 leading-tight">
                     Developing <br />
                     <span className="text-gradient-main drop-shadow-[0_0_30px_rgba(112,0,255,0.4)]">The Future</span>
                 </h1>
 
-                <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+                <p className="text-gray-500 text-base md:text-xl max-w-2xl mx-auto mb-10 md:mb-12 font-light leading-relaxed px-4 md:px-0">
                     I transform complex, high-fidelity designs into immersive digital experiences with <span className="text-gray-400 font-medium">100% Lighthouse performance</span>. Where ultra-modern aesthetics meet zero-compromise speed.
                 </p>
 

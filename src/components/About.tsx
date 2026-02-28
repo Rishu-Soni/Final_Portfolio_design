@@ -9,7 +9,7 @@ const About: React.FC = () => {
         <section id="about" className="py-32 relative">
             <div className="container mx-auto px-6 max-w-6xl ">
                 <div
-                    className="glass-panel rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden"
+                    className="glass-panel rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-12 relative overflow-hidden"
                     style={{
                         boxShadow: '0 10px 40px rgba(0, 0, 0, 0.2), inset 2px 2px 6px rgba(255, 255, 255, 0.2), inset -2px -2px 6px rgba(0, 0, 0, 0.5)'
                     }}
@@ -21,7 +21,7 @@ const About: React.FC = () => {
                     <div className="flex flex-col lg:flex-row items-center gap-16 relative z-10">
                         {/* Visual Profile */}
                         <div className="w-full lg:w-5/12 flex justify-center">
-                            <div className="relative w-72 h-72 md:w-96 md:h-96">
+                            <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-96 md:h-96">
                                 <div className="absolute inset-0 rounded-full border-2 border-primary/40 border-dashed animate-spin-slow" />
                                 <div className="absolute -inset-4 rounded-full border border-secondary/40 animate-spin-slower" />
                                 <div className="absolute -inset-8 rounded-full border border-accent/20 border-dotted animate-spin-slowest" />
@@ -46,19 +46,17 @@ const About: React.FC = () => {
                         {/* Text Content */}
                         <div className="w-full lg:w-7/12">
                             <h2 className="text-5xl font-display font-bold mb-8">
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Frontend</span> Developer
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-4xl sm:text-5xl">Frontend</span> <span className="text-4xl sm:text-5xl">Developer</span>
                             </h2>
 
                             <div className="space-y-6 text-gray-300 font-light text-lg leading-relaxed">
-                                <p>
-                                    I am the <span className="text-white font-medium">Rishu</span> currently a Frontend Developer who loves to development, architects and obsessed with the <span className="text-white font-medium">future of interface design</span>. My work bridges the gap between just a design to websites that actually works and can be on <span className="text-white font-medium">top</span>.
-                                </p>
-                                <p>
-                                    The one with hands-on experiences in real world projects, I don&apos;t just code websites; I engineer experiences that feel alive. I believe software should feel like magic—fluid, responsive, and undeniably alive.
-                                </p>
+
+                                <p>I’m <span className="text-white font-medium">Rishu</span>. I’m a frontend developer and soon to be a full stack developer, but more than that, I’m someone who’s genuinely obsessed with where interface design is heading next.</p>
+                                <p>I’ve never been a fan of just 'building' a site and calling it a day. For me, it’s about the bridge between a flat design and a high-performance reality. Having spent a lot of time on real-world projects, I’ve learned that <span className="text-white font-medium">the best code is the kind you don't even notice—it</span> just feels fluid, intuitive, and maybe a little bit like magic.</p>
+                                <p>My goal is pretty simple: I take ambitious ideas and turn them into products that don't just function, but actually stand out.</p>
                             </div>
 
-                            <div className="mt-10 grid grid-cols-3 gap-6">
+                            <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6">
                                 {STATS.map((stat, index) => (
                                     <div key={index} className="p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors text-center">
                                         <h3 className={`text-3xl font-bold text-${stat.color} mb-1`}>{stat.value}</h3>

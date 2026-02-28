@@ -19,21 +19,21 @@ export const STATS: Stat[] = [
 ];
 
 export const MARQUEE_TAGS_ROW_1 = [
-    { name: 'HTML5', gradient: 'from-teal-400 to-blue-500' },
-    { name: 'CSS3', gradient: 'from-fuchsia-600 to-rose-600' },
-    { name: 'JavaScript', gradient: 'from-violet-600 to-fuchsia-600' },
-    { name: 'Tailwind CSS', gradient: 'from-rose-400 to-pink-600' },
-    { name: 'React', gradient: 'from-purple-500 to-pink-500' },
-    { name: 'nodeJS', gradient: 'from-pink-500 to-orange-500' },
-    { name: 'ExpressJS', gradient: 'from-blue-600 to-violet-600' },
-    { name: 'API', gradient: 'from-green-400 to-cyan-500' },
-    { name: 'Database', gradient: 'from-blue-500 to-indigo-500' },
-    { name: 'UI/UX', gradient: 'from-cyan-500 to-blue-600' },
-    { name: 'Figma', gradient: 'from-blue-500 to-purple-500' },
-    { name: 'Prototyping', gradient: 'from-violet-600 to-fuchsia-600' },
-    { name: 'C', gradient: 'from-sky-400 to-blue-600' },
-    { name: 'C++', gradient: 'from-teal-300 to-emerald-500' },
-    { name: 'Python', gradient: 'from-cyan-400 to-fuchsia-500' },
+    { proficiency: 80, name: 'HTML5', gradient: 'from-teal-400 to-blue-500' },
+    { proficiency: 85, name: 'CSS3', gradient: 'from-fuchsia-600 to-rose-600' },
+    { proficiency: 80, name: 'JavaScript', gradient: 'from-violet-600 to-fuchsia-600' },
+    { proficiency: 60, name: 'Tailwind CSS', gradient: 'from-rose-400 to-pink-600' },
+    { proficiency: 50, name: 'React', gradient: 'from-purple-500 to-pink-500' },
+    { proficiency: 40, name: 'nodeJS', gradient: 'from-pink-500 to-orange-500' },
+    { proficiency: 40, name: 'ExpressJS', gradient: 'from-blue-600 to-violet-600' },
+    { proficiency: 75, name: 'API', gradient: 'from-green-400 to-cyan-500' },
+    { proficiency: 50, name: 'Database', gradient: 'from-blue-500 to-indigo-500' },
+    { proficiency: 85, name: 'UI/UX', gradient: 'from-cyan-500 to-blue-600' },
+    { proficiency: 40, name: 'Figma', gradient: 'from-blue-500 to-purple-500' },
+    { proficiency: 90, name: 'C', gradient: 'from-sky-400 to-blue-600' },
+    { proficiency: 80, name: 'C++', gradient: 'from-teal-300 to-emerald-500' },
+    { proficiency: 60, name: 'Python', gradient: 'from-cyan-400 to-fuchsia-500' },
+    // { proficiency: 35, name: 'Prototyping', gradient: 'from-violet-600 to-fuchsia-600' },
 ];
 
 const getGradientByName = (name: string) => {

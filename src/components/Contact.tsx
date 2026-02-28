@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
+import { motion } from 'motion/react';
+import { Send, User, Mail, MessageSquare } from 'lucide-react';
 
 const Contact: React.FC = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -71,90 +73,133 @@ const Contact: React.FC = () => {
     };
 
     return (
-        <section id="contact" className="py-32 relative">
+        <section id="contact" className="py-20 md:py-32 relative">
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl max-h-[500px] bg-gradient-to-r from-secondary/20 via-primary/20 to-accent/20 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="container mx-auto px-6 flex justify-center relative z-10">
-                <div
-                    className="w-full max-w-3xl glass-panel p-10 md:p-16 rounded-[2.5rem] border border-white/10 relative overflow-hidden"
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.8 }}
+                    className="w-full max-w-4xl glass-panel p-8 sm:p-12 md:p-16 rounded-[2.5rem] md:rounded-[3rem] border border-white/10 relative overflow-hidden"
                     style={{
                         boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.3), inset 2px 2px 6px rgba(255, 255, 255, 0.2), inset -2px -2px 6px rgba(0, 0, 0, 0.5)'
                     }}
                 >
                     {/* Decorative Glows */}
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-[50px]" />
-                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-accent/20 blur-[50px]" />
+                    <div className="absolute top-[-10%] right-[-5%] w-64 h-64 bg-primary/20 rounded-full blur-[80px]" />
+                    <div className="absolute bottom-[-10%] left-[-5%] w-64 h-64 bg-accent/20 rounded-full blur-[80px]" />
 
-                    <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-center">Say me <span className="text-primary">Hi!</span></h2>
-                    <p className="text-center text-gray-300 mb-12 text-lg">Send a signal into the void. I&apos;ll pick it up.</p>
+                    <div className="text-center mb-12 relative z-10">
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2, duration: 0.5 }}
+                            className="text-4xl sm:text-5xl md:text-6xl font-display font-bold mb-6 tracking-tight"
+                        >
+                            Let's build something <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">epic.</span>
+                        </motion.h2>
+                        <motion.p
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.4, duration: 0.5 }}
+                            className="text-gray-300 text-lg md:text-xl font-light"
+                        >
+                            Send a signal into the void. I'll pick it up.
+                        </motion.p>
+                    </div>
 
-                    <form className="space-y-8" onSubmit={handleSubmit}>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div className="group relative">
+                    <form className="space-y-6 relative z-10" onSubmit={handleSubmit}>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {/* Name Input */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.3, duration: 0.5 }}
+                                className="relative group"
+                            >
+                                <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                                    <User className="h-5 w-5 text-gray-400 group-focus-within:text-primary transition-colors" />
+                                </div>
                                 <input
                                     type="text"
                                     id="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="peer w-full bg-black/20 border-b-2 border-white/10 px-4 py-3 text-white focus:outline-none focus:border-primary transition-all placeholder-transparent rounded-t-lg"
-                                    placeholder="Name"
+                                    className="w-full bg-white/5 border border-white/10 px-12 py-4 rounded-2xl text-white focus:outline-none focus:border-primary/50 focus:bg-white/10 transition-all shadow-[inset_0_2px_10px_rgba(0,0,0,0.2)]"
+                                    placeholder="Your Name"
                                     required
                                 />
-                                <label
-                                    htmlFor="name"
-                                    className="absolute left-4 -top-3.5 text-xs text-primary transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-primary pointer-events-none"
-                                >
-                                    Name
-                                </label>
-                            </div>
-                            <div className="group relative">
+                            </motion.div>
+
+                            {/* Email Input */}
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.4, duration: 0.5 }}
+                                className="relative group"
+                            >
+                                <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                                    <Mail className="h-5 w-5 text-gray-400 group-focus-within:text-primary transition-colors" />
+                                </div>
                                 <input
                                     type="email"
                                     id="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="peer w-full bg-black/20 border-b-2 border-white/10 px-4 py-3 text-white focus:outline-none focus:border-primary transition-all placeholder-transparent rounded-t-lg"
-                                    placeholder="Email"
+                                    className="w-full bg-white/5 border border-white/10 px-12 py-4 rounded-2xl text-white focus:outline-none focus:border-primary/50 focus:bg-white/10 transition-all shadow-[inset_0_2px_10px_rgba(0,0,0,0.2)]"
+                                    placeholder="Your Email"
                                     required
                                 />
-                                <label
-                                    htmlFor="email"
-                                    className="absolute left-4 -top-3.5 text-xs text-primary transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-primary pointer-events-none"
-                                >
-                                    Email
-                                </label>
-                            </div>
+                            </motion.div>
                         </div>
 
-                        <div className="group relative">
+                        {/* Message Input */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.5, duration: 0.5 }}
+                            className="relative group"
+                        >
+                            <div className="absolute top-4 left-0 pl-5 pointer-events-none">
+                                <MessageSquare className="h-5 w-5 text-gray-400 group-focus-within:text-primary transition-colors" />
+                            </div>
                             <textarea
                                 id="message"
-                                rows={4}
+                                rows={5}
                                 value={formData.message}
                                 onChange={handleChange}
-                                className="peer w-full bg-black/20 border-b-2 border-white/10 px-4 py-3 text-white focus:outline-none focus:border-primary transition-all placeholder-transparent rounded-t-lg resize-none"
-                                placeholder="Message"
+                                className="w-full bg-white/5 border border-white/10 px-12 py-4 rounded-2xl text-white focus:outline-none focus:border-primary/50 focus:bg-white/10 transition-all shadow-[inset_0_2px_10px_rgba(0,0,0,0.2)] resize-none"
+                                placeholder="Your Message"
                                 required
                             />
-                            <label
-                                htmlFor="message"
-                                className="absolute left-4 -top-3.5 text-xs text-primary transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-primary pointer-events-none"
-                            >
-                                Message
-                            </label>
-                        </div>
+                        </motion.div>
 
-                        <div className="pt-6 flex justify-center">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.6, duration: 0.5 }}
+                            className="pt-4 flex justify-center w-full"
+                        >
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="px-12 py-4 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-full shadow-[0_0_30px_rgba(112,0,255,0.5)] hover:shadow-[0_0_50px_rgba(0,240,255,0.6)] hover:scale-105 transition-all duration-300 uppercase tracking-widest text-sm disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                                className="group flex items-center justify-center gap-3 w-full sm:w-auto min-w-[200px] px-8 py-4 bg-white/5 border border-white/10 text-white font-medium rounded-2xl hover:bg-white/10 hover:border-primary/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden relative shadow-lg"
                             >
-                                {isSubmitting ? 'Transmitting...' : 'Transmit'}
+                                <div className="absolute inset-0 w-0 bg-gradient-to-r from-primary to-accent transition-all duration-500 ease-out group-hover:w-full z-0 opacity-80" />
+                                <span className="relative z-10 text-lg">{isSubmitting ? 'Transmitting...' : 'Send Message'}</span>
+                                <Send className="w-5 h-5 relative z-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </button>
-                        </div>
+                        </motion.div>
                     </form>
-                </div>
+                </motion.div>
             </div>
         </section>
     );
