@@ -1,4 +1,9 @@
 import type { Project, NavItem, Stat } from './types';
+import chessImage from './assets/Chess.png';
+import calcImage from './assets/Calculator.png';
+import todoImage from './assets/ToDo_List.png';
+import glassPortfolioImage from './assets/Glassmorphoism_Portfolio.png';
+import simplePortfolioImage from './assets/Simple_Portfolio.png';
 
 export const NAV_ITEMS: NavItem[] = [
     { id: 'hero', label: 'Start', color: 'primary' },
@@ -31,50 +36,76 @@ export const MARQUEE_TAGS_ROW_1 = [
     { name: 'Python', gradient: 'from-cyan-400 to-fuchsia-500' },
 ];
 
-// export const MARQUEE_TAGS_ROW_2 = [
-// ];
+const getGradientByName = (name: string) => {
+    // Find the object where the name matches
+    const tag = MARQUEE_TAGS_ROW_1.find(item => item.name === name);
 
+    // Return the gradient string, or a default fallback if not found
+    return tag ? tag.gradient : 'from-gray-400 to-gray-500';
+};
 export const PROJECTS: Project[] = [
     {
         id: '1',
-        title: 'Nova Chess',
-        description: 'AI-powered 3D Chess engine with real-time analytics and holographic UI.',
+        title: 'Chess',
+        description: 'Fully functional pvp chess game inspired by chess.com ',
         tags: [
-            { name: 'NextJS', color: 'primary' },
-            { name: 'Socket.io', color: 'secondary' }
+            { name: 'HTML5', color: getGradientByName('HTML5') },
+            { name: 'CSS3', color: getGradientByName('CSS3') },
+            { name: 'JavaScript', color: getGradientByName('JavaScript') }
         ],
-        image: 'https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=1000&q=80',
-        layout: 'large'
+        image: chessImage,
+        layout: 'standard',
+        link: 'https://chess-rishu.rishusoni6393.workers.dev/'
     },
     {
         id: '2',
         title: 'NeoCalc',
-        description: 'Glassmorphic scientific calculator with history tape.',
+        description: 'Neomorphic standard calculator with simplified UI.',
         tags: [
-            { name: 'React', color: 'accent' }
+            { name: 'HTML5', color: getGradientByName('HTML5') },
+            { name: 'CSS3', color: getGradientByName('CSS3') },
+            { name: 'JavaScript', color: getGradientByName('JavaScript') }
         ],
-        image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&q=80',
-        layout: 'tall'
+        image: calcImage,
+        layout: 'standard',
+        link: 'https://calculator-rishu.rishusoni6393.workers.dev/'
     },
     {
         id: '3',
         title: 'TaskFlow',
-        description: 'Kanban-style task manager with drag-and-drop support and collaborative real-time updates.',
+        description: 'A simple task manager with local browser storage support.',
         tags: [
-            { name: 'Svelte', color: 'green-400' },
-            { name: 'Firebase', color: 'yellow-400' }
+            { name: 'HTML5', color: getGradientByName('HTML5') },
+            { name: 'CSS3', color: getGradientByName('CSS3') },
+            { name: 'JavaScript', color: getGradientByName('JavaScript') }
         ],
-        image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1000&q=80',
-        layout: 'wide'
+        image: todoImage,
+        layout: 'standard',
+        link: 'https://todo-rishu.rishusoni6393.workers.dev/'
     },
     {
         id: '4',
-        title: 'LockKey',
-        description: 'Entropy-based secure password generator.',
+        title: 'GlassPortfolio',
+        description: 'A Modern portfolio with glassmorphoism aesthetic and 3D animation effect.',
         tags: [
-            { name: 'Vue 3', color: 'blue-400' }
+            { name: 'React', color: getGradientByName('React') },
+            { name: 'Tailwind CSS', color: getGradientByName('Tailwind CSS') }
         ],
-        image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=600&q=80',
-        layout: 'standard'
+        image: glassPortfolioImage,
+        layout: 'standard',
+
+        link: 'https://portfolio-rishu.pages.dev/'
+    },
+    {
+        id: '5',
+        title: 'SimplePortfolio',
+        description: 'Minimalistic portfolio website with clean animations and features light/dark mode.',
+        tags: [
+            { name: 'React', color: getGradientByName('React') },
+            { name: 'Tailwind CSS', color: getGradientByName('Tailwind CSS') }
+        ],
+        image: simplePortfolioImage,
+        layout: 'standard',
+        link: 'https://pre-portfolio-rishu.rishusoni6393.workers.dev/'
     }
 ];

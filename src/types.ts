@@ -5,7 +5,7 @@ export interface Project {
     tags: { name: string; color: string }[];
     image: string;
     link?: string;
-    layout: 'large' | 'tall' | 'wide' | 'standard';
+    layout: 'standard' | 'large' | 'tall' | 'wide';
 }
 
 export interface NavItem {
