@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
         const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
 
         const text = `
-    🚀 *New Portfolio Contact from final_portfolio_2*
+    🚀 *New Portfolio Contact from the final_portfolio_2*
     -----------------------------
     👤 *Name:* ${formData.name}
     📧 *Email:* ${formData.email}
