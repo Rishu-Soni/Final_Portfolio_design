@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 import { MARQUEE_TAGS_ROW_1 } from '@/constants';
-import BlobBackground from '@/components/ui/BlobBackground';
+// import BlobBackground from '@/components/ui/BlobBackground';
 
 const Extended_Skills: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -83,7 +83,7 @@ const Extended_Skills: React.FC = () => {
                     >
                         {/* Background Design inside the box */}
                         <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden rounded-[2.5rem]">
-                            <BlobBackground />
+                            {/* <BlobBackground /> */}
                             <div className="absolute -top-24 -right-24 w-64 h-64 bg-accent/20 rounded-full blur-[80px]" />
                             <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/20 rounded-full blur-[80px]" />
                         </div>
