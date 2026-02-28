@@ -1,5 +1,6 @@
 
 import React from 'react';
+import me from '@/assets/me_Img.png';
 
 import { STATS } from '@/constants';
 
@@ -27,9 +28,9 @@ const About: React.FC = () => {
 
                                 <div className="absolute inset-4 glass-panel rounded-full overflow-hidden flex items-center justify-center z-10 border-2 border-white/10">
                                     <img
-                                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&q=80"
+                                        src={me}
                                         alt="Portrait of Designer"
-                                        className="absolute inset-0 w-full h-full object-cover hover:scale-110 transition-transform duration-700 filter brightness-110 contrast-110"
+                                        className="absolute inset-0 w-full h-full object-cover drop-shadow-2xl transition-all duration-400 filter brightness-80 contrast-110 grayscale-90 hover:grayscale-0 hover:brightness-100"
                                     />
                                 </div>
 
