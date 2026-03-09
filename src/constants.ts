@@ -86,7 +86,7 @@ export const PROJECTS: Project[] = [
     {
         id: '4',
         title: 'GlassPortfolio',
-        description: 'A Modern portfolio with glassmorphoism aesthetic and 3D animation effect.',
+        description: 'Portfolio with glassmorphoism effect and 3D animations.',
         tags: [
             { name: 'React', color: getGradientByName('React') },
             { name: 'Tailwind CSS', color: getGradientByName('Tailwind CSS') }
@@ -99,7 +99,7 @@ export const PROJECTS: Project[] = [
     {
         id: '5',
         title: 'SimplePortfolio',
-        description: 'Minimalistic portfolio website with clean animations and features light/dark mode.',
+        description: 'Portfolio with clean animations, light/dark mode.',
         tags: [
             { name: 'React', color: getGradientByName('React') },
             { name: 'Tailwind CSS', color: getGradientByName('Tailwind CSS') }

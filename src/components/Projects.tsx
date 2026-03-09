@@ -40,12 +40,12 @@ const Projects: React.FC = () => {
                                     </div>
 
                                     {/* Description - Middle/Flex-grow, disappears on hover */}
-                                    <div className="flex-1 flex items-center mt-4 opacity-100 group-hover:opacity-0 group-hover:scale-95 transition-all duration-500">
+                                    <div className={`flex-1 flex items-center mt-0 md:mt-4 opacity-100 group-hover:opacity-0 group-hover:scale-95 transition-all duration-500`}>
                                         <p className="text-gray-300 text-sm leading-relaxed">{project.description}</p>
                                     </div>
 
                                     {/* Tags - Bottom, disappears on hover */}
-                                    <div className="flex flex-wrap gap-2 mt-4 opacity-100 group-hover:opacity-0 group-hover:translate-y-4 transition-all duration-500">
+                                    <div className="flex flex-wrap gap-2 mt-0 md:mt-4 opacity-100 group-hover:opacity-0 group-hover:translate-y-4 transition-all duration-500">
                                         {project.tags.map((tag, i) => (
                                             <span key={i} className={`text-[10px] font-bold px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-transparent bg-clip-text bg-gradient-to-r ${tag.color}`}>
                                                 {tag.name}

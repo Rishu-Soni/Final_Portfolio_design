@@ -1,9 +1,8 @@
 import React from 'react';
-// import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
     return (
-        <section id="hero" className="min-h-screen flex items-center justify-center relative">
+        <section id="hero" className="min-h-dvh flex items-center justify-center relative">
             <div className="container mx-auto px-6 text-center z-10 relative">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 md:w-[600px] md:h-[600px] bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full blur-[60px] md:blur-[80px] -z-10 animate-pulse" />
 
@@ -20,24 +19,6 @@ const Hero: React.FC = () => {
                 <p className="text-gray-500 text-base md:text-xl max-w-2xl mx-auto mb-10 md:mb-12 font-light leading-relaxed px-4 md:px-0">
                     I transform complex, high-fidelity designs into immersive digital experiences with <span className="text-gray-400 font-medium">100% Lighthouse performance</span>. Where ultra-modern aesthetics meet zero-compromise speed.
                 </p>
-
-                {/* <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                    <a
-                        href="#projects"
-                        className="group relative px-8 py-4 bg-transparent overflow-hidden rounded-xl border border-primary/50 text-white font-bold tracking-wide transition-all hover:shadow-[0_0_40px_rgba(0,240,255,0.4)] hover:border-primary"
-                    >
-                        <div className="absolute inset-0 w-0 bg-primary transition-all duration-[250ms] ease-out group-hover:w-full opacity-20" />
-                        <span className="relative flex items-center gap-2">
-                            View Projects <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </span>
-                    </a>
-                    <a
-                        href="#about"
-                        className="px-8 py-4 rounded-xl glass-panel hover:bg-white/10 transition-all text-gray-300 hover:text-white font-medium border border-white/5 hover:border-white/20"
-                    >
-                        About Me
-                    </a>
-                </div> */}
             </div>
 
             <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 opacity-60">
