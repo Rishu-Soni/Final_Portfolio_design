@@ -51,19 +51,18 @@ const About: React.FC = () => {
 
                             <div className="space-y-6 text-gray-300 font-light text-lg leading-relaxed">
 
-                                <p>I’m <span className="text-white font-medium">Rishu</span>. I’m a frontend developer and soon to be a full stack developer, but more than that, I’m someone who’s genuinely obsessed with where interface design is heading next.</p>
-                                <p>I’ve never been a fan of just 'building' a site and calling it a day. For me, it’s about the bridge between a flat design and a high-performance reality. Having spent a lot of time on real-world projects, I’ve learned that <span className="text-white font-medium">the best code is the kind you don't even notice—it</span> just feels fluid, intuitive, and maybe a little bit like magic.</p>
-                                <p>My goal is pretty simple: I take ambitious ideas and turn them into products that don't just function, but actually stand out.</p>
+                                <p>I’m <span className="text-white font-medium">Rishu</span>, a passionate frontend developer who is genuinely obsessed with where interface design is heading. Having worked on real-world projects, I believe the best code is the kind you never notice — it just feels fluid, intuitive, and a little magical.</p>
+                                <p>Currently expanding into <span className="text-white font-medium">full-stack development</span>, I am focused on bridging the gap between flat design and high-performance reality.  <span className="text-white font-medium">My goal</span> is always simple — take ambitious ideas and turn them into products that do not just function, but genuinely stand out.</p>
                             </div>
 
-                            <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6">
+                            {/* <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6">
                                 {STATS.map((stat, index) => (
                                     <div key={index} className="p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors text-center">
                                         <h3 className={`text-3xl font-bold text-${stat.color} mb-1`}>{stat.value}</h3>
                                         <p className="text-[10px] text-gray-400 uppercase tracking-widest">{stat.label}</p>
                                     </div>
                                 ))}
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
