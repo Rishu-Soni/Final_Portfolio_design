@@ -1,13 +1,14 @@
 import React from 'react';
+import gridBg from '@/assets/background_img/grid_white.svg';
 
 const BlobBackground: React.FC = () => {
     return (
         <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-[-10%] left-[-10%] w-[50dvw] h-[50dvw] bg-secondary/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob" />
-            <div className="absolute top-[20%] right-[-10%] w-[40dvw] h-[40dvw] bg-primary/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-200" style={{ animationDelay: '0.2s' }} />
-            <div className="absolute bottom-[-10%] left-[20%] w-[45dvw] h-[45dvw] bg-accent/20 rounded-full mix-blend-screen filter blur-[120px] animate-blob animation-delay-400" style={{ animationDelay: '0.4s' }} />
-            {/* Noise Overlay */}
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPHBhdGggZD0iTTAgNDBoNDBNNDAgMHY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDMpIiBzdHJva2Utd2lkdGg9IjEiLz4KPC9zdmc+')] opacity-20" />
+            <img 
+                src={gridBg} 
+                alt="Background Grid" 
+                className="w-full h-full object-cover opacity-50 pointer-events-none" 
+            />
         </div>
     );
 };

@@ -10,7 +10,7 @@
   --color-primary: hsl(184, 100%, 50%);
   --color-secondary: hsl(266, 100%, 50%);
   --color-accent: hsl(324, 100%, 50%);
-  --color-background-dark: hsl(240, 47%, 12%);
+  --color-background-dark: hsl(0, 0%, 8%);
   --color-glass-border: hsla(0, 0%, 100%, 0.15);
 
   --font-display: var(--font-space-grotesk);
@@ -58,6 +58,7 @@
   }
 }
 
+
 /* Custom Utilities */
 .glass-panel {
   background: rgba(20, 20, 35, 0.3);
@@ -104,4 +105,41 @@
 
 html {
   scrollbar-width: none;
+}
+
+/* Scroll-driven Hero Zoom Out Animation */
+#hero {
+  perspective: 1000px;
+}
+
+@keyframes hero-zoom-out {
+  0% {
+    transform: scale(1) translateZ(0);
+    opacity: 1;
+    z-index: 10;
+  }
+
+  100% {
+    transform: scale(0.2) translateZ(-150px);
+    opacity: 0.3;
+    z-index: -10;
+  }
+}
+
+#hero-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  transform-style: preserve-3d;
+  will-change: transform, opacity, z-index;
+  animation: hero-zoom-out linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0px 500px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #hero-content {
+    animation: none;
+  }
 }
